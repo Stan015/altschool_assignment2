@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Web Development - AltSchool assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <img src="images/Logo.svg" alt="logo">
+
+            <h1>For Individuals</h1>
+            <p>Start benefiting from the wellness experience. For companies looking on increasing productivity, and improving organization wellness.</p>
+        </section>
+
+        <!-- individuls form -->
+        <form action="#" id="individuls_form">
+            <p>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" placeholder="Enter your first name">
+            </p>
+
+            <p>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" placeholder="Enter your last name">
+            </p>
+
+            <p>
+                <label for="gender">Gender</label>
+                <input type="search" name="gender" id="gender" list="gender_list" placeholder="Select here">
+                <datalist id="gender_list">
+                    <option value="Male"></option>
+                    <option value="Female"></option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="date_of_birth">Date of Birth</label>
+                <input type="date" name="date_of_birth" id="date_of_birth" placeholder="Select here">
+            </p>
+
+            <p>
+                <label for="weight">Weight (KG)</label>
+                <input type="number" name="weight" id="weight" placeholder="Enter Weight">
+            </p>
+
+            <p>
+                <label for="height">Height (CM)</label>
+                <input type="number" name="height" id="height" placeholder="Enter height here...">
+            </p>
+
+            <p>
+                <label for="activity_level">Activity Level</label>
+                <input type="search" name="activity_level" id="activity_level" list="activity_levels" placeholder="Select here">
+                <datalist id="activity_levels">
+                    <option value="Activity Level One"></option>
+                    <option value="Activity Level Two"></option>
+                    <option value="Activity Level Three"></option>
+                    <option value="Activity Level Four"></option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter password">
+            </p>
+
+            <div class="form_last_child">
+                <button type="submit" name="submit_button">Register</button>
+                <p>By clicking Register, you agree to our <span class="terms_of_use">Terms of Use</span> and our <span class="privacy_policy">Privacy Policy</span></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
