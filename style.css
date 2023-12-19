@@ -72,6 +72,7 @@ section {
         width: 100%;
         gap: 1rem;
         align-items: flex-start;
+        position: relative;
 
         label {
             color: var(--clr-primary);
@@ -91,6 +92,16 @@ section {
                 outline: none;
             }
         }
+        
+        .eye_opened {
+            display: none;
+        }
+
+        .eye_closed {
+            position: absolute;
+            right: 1rem;
+            top: 3.5rem;
+        }
 
         select {
             width: 100%;
@@ -98,7 +109,9 @@ section {
             padding: 0 1rem;
             border: 2px solid #A6A6A6;
             border-radius: 0.5rem;
-            
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
 
             option {
                 position: absolute;
@@ -109,6 +122,14 @@ section {
                 border: 2px solid #2EC4B6;
                 outline: none;
             }
+        }
+
+        .down_line {
+            position: absolute;
+            right: 1rem;
+            top: 3.5rem;
+            cursor: pointer;
+            pointer-events: none;
         }
     }
 
@@ -211,7 +232,7 @@ section {
     
 }
 
-@media screen and (min-width: 769px) and (max-width: 1000px) {
+@media screen and (min-width: 769px) and (max-width: 1250px) {
     main {
         gap: 4rem;
         padding: 0 2rem;
