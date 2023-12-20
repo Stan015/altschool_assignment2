@@ -171,7 +171,7 @@ section {
     display: none;
 }
 
-@media screen and (min-width: 280px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         /* width: 100svw; */
         height: 100%;
