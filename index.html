@@ -23,18 +23,18 @@
         <form action="#" id="individuls_form">
             <p>
                 <label for="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name" placeholder="Enter your first name">
+                <input type="text" name="first_name" id="first_name" placeholder="Enter your first name" required>
             </p>
 
             <p>
                 <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name" placeholder="Enter your last name">
+                <input type="text" name="last_name" id="last_name" placeholder="Enter your last name" required>
             </p>
 
             <p>
                 <label for="gender">Gender</label>
-                <select name="gender" title="gender" id="gender">
-                    <option value="Select gender">Select gender</option>
+                <select name="gender" title="gender" id="gender" required>
+                    <option value="" disabled selected>Select gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
@@ -43,7 +43,7 @@
 
             <p>
                 <label for="date_of_birth">Date of Birth</label>
-                <input type="date" name="date_of_birth" id="date_of_birth" placeholder="Select here">
+                <input type="date" name="date_of_birth" id="date_of_birth" placeholder="Select here" required>
             </p>
 
             <p>
@@ -58,8 +58,8 @@
 
             <p>
                 <label for="activity_level">Activity Level</label>
-                <select name="activity_level" title="activity_level" id="activity_level">
-                    <option value="Select activity level">Select activity level</option>
+                <select name="activity_level" title="activity_level" id="activity_level" required>
+                    <option value="" disabled selected>Select activity level</option>
                     <option value="Level One">Level One</option>
                     <option value="Level Two">Level Two</option>
                     <option value="Level Three">Level Three</option>
@@ -70,7 +70,7 @@
 
             <p>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter password">
+                <input type="password" name="password" id="password" placeholder="Enter password" required>
                 <img src="/images/eye.svg" alt="opened eye icon" class="eye_opened">
                 <img src="/images/eye_closed.svg" alt="closed eye icon" class="eye_closed">
             </p>
