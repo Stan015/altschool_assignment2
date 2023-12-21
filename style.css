@@ -25,32 +25,35 @@ main {
     justify-content: center;
 }
 
+/* I used CSS Nesting here for practice purpose, it is not fully supported yet but I love it */
+/* for mobile phone compatibility, all nested elements starts with '&', this is not realy required by other devices */
+
 section {
     display: block;
     width: 28rem;
     height: 17rem;
 
 
-    img {
+    & img {
         width: 4.8rem;
         height: 5rem;
         margin-bottom: 3rem;
     }
 
-    h1 {
+    & h1 {
         color: var(--clr-primary);
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
     }
 
-    p {
+    & p {
         color: var(--clr-secondary);
         font-size: 1rem;
         font-weight: 300;
         line-height: 1.6rem;
     }
 
-    p + p {
+    & p + p {
         display: none;
     }
 }
@@ -66,7 +69,7 @@ section {
     gap: 1.5rem;
     border-radius: 0.5rem;
 
-    p {
+    & p {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -74,39 +77,47 @@ section {
         align-items: flex-start;
         position: relative;
 
-        label {
+        & label {
             color: var(--clr-primary);
             font-size: 1rem;
             font-weight: 500;
         }
 
-        input {
+        & input {
             width: calc(100% - 2rem);
             height: 3rem;
+            color: #737373;
+            background-color: #FFFFFF;
             padding: 0 1rem;
             border: 2px solid #A6A6A6;
             border-radius: 0.5rem;
-            
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+
+            ;
             &:hover, &:focus {
                 border: 2px solid #2EC4B6;
                 outline: none;
             }
         }
         
-        .eye_opened {
+        & .eye_opened {
             display: none;
         }
 
-        .eye_closed {
+        & .eye_closed {
             position: absolute;
             right: 1rem;
             top: 3.5rem;
         }
 
-        select {
+        & select {
             width: 100%;
             height: 3rem;
             padding: 0 1rem;
+            color: #737373;
+            background-color: #FFFFFF;
             border: 2px solid #A6A6A6;
             border-radius: 0.5rem;
             -webkit-appearance: none;
@@ -120,7 +131,7 @@ section {
             }
         }
 
-        .down_line {
+        & .down_line {
             position: absolute;
             right: 1rem;
             top: 3.5rem;
@@ -132,7 +143,7 @@ section {
     .form_last_child {
         grid-area: 5 / 1 / 5 / 3;
 
-        button {
+        & button {
             color: var(--clr-action);
             font-size: 1rem;
             font-weight: 500;
@@ -145,7 +156,7 @@ section {
             border-radius: 0.5rem;
         }
     
-        p {
+        & p {
             display: inherit;
             color: var(--clr-primary);
             font-size: 0.8rem;
@@ -154,7 +165,7 @@ section {
             text-align: center; 
             padding-top: 1rem; 
             
-            .terms_of_use, .privacy_policy {
+            & .terms_of_use, .privacy_policy {
                 color: #2EC4B6;
             }
         }
@@ -168,6 +179,8 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+    /* for mobile compatibility, all nested element starts with '&'. Hopefully this will change in future for mobile devices */
+
     body {
         /* width: 100svw; */
         height: 100%;
@@ -184,11 +197,11 @@ section {
         width: 22rem;
         height: auto;
     
-        p {
+        & p {
             display: none;
         } 
 
-        p + p {
+        & p + p {
             display: inherit;
         }
     }
@@ -200,10 +213,10 @@ section {
         width: 20rem;
         padding: 1rem;
     
-        .form_last_child {
+        & .form_last_child {
             display: block;
         
-            p {
+            & p {
                 display: none;
             }
             
@@ -221,7 +234,7 @@ section {
         padding-top: 1rem; 
         width: 18rem;
 
-        .terms_of_use, .privacy_policy {
+        & .terms_of_use, .privacy_policy {
             color: #2EC4B6;
         }
     }
